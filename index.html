@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jennifers Eden | Luxury Event Styling &amp; Floral Hire, Gloucestershire</title>
+<meta name="description" content="Jennifers Eden creates breathtaking floral installations, luxury soft play and bespoke event styling for weddings, christenings, birthdays and corporate events across Gloucestershire and Oxfordshire.">
+<meta name="keywords" content="luxury event styling Gloucestershire, wedding styling Gloucestershire, flower arch hire Gloucestershire, soft play hire Gloucestershire, event styling Oxfordshire, luxury party hire Gloucester">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ivory:#FBF8F4;
+    --ivory-deep:#F5F0E8;
+    --blush:#E9CBC4;
+    --blush-deep:#DDB3AA;
+    --sage:#8A9A82;
+    --sage-deep:#71816A;
+    --champagne:#C6A664;
+    --champagne-deep:#AD8C4C;
+    --beige:#E7DFCC;
+    --charcoal:#3B342E;
+    --charcoal-soft:#75695E;
+    --white:#FFFFFF;
+    --shadow: 0 20px 60px rgba(59,52,46,0.08);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+  }
+  body{
+    font-family:'Jost',sans-serif;
+    font-weight:300;
+    color:var(--charcoal);
+    background:var(--ivory);
+    line-height:1.7;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,h4{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:500;
+    color:var(--charcoal);
+    letter-spacing:0.01em;
+  }
+  a{text-decoration:none;color:inherit;}
+  ul{list-style:none;}
+  img{max-width:100%;display:block;}
+  .eyebrow{
+    font-family:'Jost',sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.28em;
+    font-size:0.72rem;
+    color:var(--champagne-deep);
+    font-weight:500;
+    margin-bottom:14px;
+    display:inline-block;
+  }
+  .container{max-width:1180px;margin:0 auto;padding:0 32px;}
+  .section{padding:120px 0;position:relative;}
+  @media(max-width:768px){.section{padding:80px 0;}}
+
+  /* ---------- Vine Divider Signature Element ---------- */
+  .vine-divider{width:100%;display:flex;justify-content:center;padding:10px 0;}
+  .vine-divider svg{width:220px;height:40px;overflow:visible;}
+  .vine-path{
+    fill:none;
+    stroke:var(--champagne);
+    stroke-width:1.4;
+    stroke-linecap:round;
+    stroke-dasharray:400;
+    stroke-dashoffset:400;
+    transition:stroke-dashoffset 1.6s ease;
+  }
+  .vine-divider.in-view .vine-path{stroke-dashoffset:0;}
+  .vine-leaf{fill:var(--sage);opacity:0;transform:scale(0.4);transform-origin:center;transition:opacity 0.8s ease 1s, transform 0.8s ease 1s;}
+  .vine-divider.in-view .vine-leaf{opacity:0.85;transform:scale(1);}
+
+  /* ---------- Header / Nav ---------- */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:1000;
+    background:rgba(251,248,244,0.88);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid rgba(59,52,46,0.06);
+    transition:padding 0.3s ease;
+  }
+  .nav-wrap{
+    max-width:1240px;margin:0 auto;padding:22px 32px;
+    display:flex;align-items:center;justify-content:space-between;
+  }
+  .logo{
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.55rem;
+    letter-spacing:0.06em;
+    font-weight:500;
+  }
+  .logo span{color:var(--sage-deep);font-style:italic;}
+  nav ul{display:flex;gap:38px;}
+  nav a{
+    font-size:0.82rem;
+    text-transform:uppercase;
+    letter-spacing:0.14em;
+    font-weight:400;
+    color:var(--charcoal-soft);
+    position:relative;
+    padding-bottom:4px;
+  }
+  nav a::after{
+    content:'';position:absolute;left:0;bottom:0;width:0;height:1px;
+    background:var(--champagne);transition:width 0.35s ease;
+  }
+  nav a:hover::after{width:100%;}
+  .nav-right{display:flex;align-items:center;gap:22px;}
+  .social-icons{display:flex;gap:14px;}
+  .social-icons a{
+    width:30px;height:30px;border-radius:50%;
+    border:1px solid var(--charcoal-soft);
+    display:flex;align-items:center;justify-content:center;
+    opacity:0.75;transition:all 0.3s ease;
+  }
+  .social-icons a:hover{opacity:1;border-color:var(--champagne);background:var(--champagne);color:var(--white);}
+  .social-icons svg{width:14px;height:14px;fill:currentColor;}
+
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:14px 30px;
+    font-size:0.78rem;text-transform:uppercase;letter-spacing:0.16em;
+    border-radius:2px;border:1px solid var(--charcoal);
+    background:transparent;color:var(--charcoal);
+    cursor:pointer;transition:all 0.35s ease;
+    font-family:'Jost',sans-serif;font-weight:500;
+    white-space:nowrap;
+  }
+  .btn:hover{background:var(--charcoal);color:var(--white);}
+  .btn-primary{background:var(--charcoal);color:var(--white);}
+  .btn-primary:hover{background:var(--sage-deep);border-color:var(--sage-deep);}
+  .btn-whatsapp{
+    background:#3B342E;color:var(--white);border-color:#3B342E;
+  }
+  .btn-whatsapp:hover{background:var(--sage-deep);border-color:var(--sage-deep);}
+  .btn-outline-light{border-color:rgba(255,255,255,0.7);color:var(--white);}
+  .btn-outline-light:hover{background:var(--white);color:var(--charcoal);}
+
+  .hamburger{display:flex;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:6px;}
+  .hamburger span{width:24px;height:1px;background:var(--charcoal);display:block;transition:transform 0.3s ease, opacity 0.3s ease;}
+  .hamburger.open span:nth-child(1){transform:translateY(6px) rotate(45deg);}
+  .hamburger.open span:nth-child(2){opacity:0;}
+  .hamburger.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg);}
+
+  /* ---------- Dropdown nav (all screen sizes) ---------- */
+  nav{
+    position:fixed;top:0;right:0;height:100vh;width:300px;max-width:82vw;
+    background:var(--ivory);
+    box-shadow:-10px 0 40px rgba(0,0,0,0.1);
+    transform:translateX(100%);transition:transform 0.4s ease;
+    padding:110px 40px;z-index:1001;
+    display:flex;flex-direction:column;
+  }
+  nav.open{transform:translateX(0);}
+  nav ul{display:flex;flex-direction:column;gap:26px;}
+  nav a{font-size:0.85rem;}
+  nav .social-icons{display:flex;margin-top:34px;}
+  .nav-overlay{
+    position:fixed;inset:0;background:rgba(59,52,46,0.35);z-index:1000;
+    opacity:0;pointer-events:none;transition:opacity 0.4s ease;
+  }
+  .nav-overlay.open{opacity:1;pointer-events:auto;}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    min-height:100vh;
+    display:flex;align-items:center;justify-content:center;
+    position:relative;
+    background:
+      radial-gradient(circle at 18% 22%, rgba(233,203,196,0.55), transparent 42%),
+      radial-gradient(circle at 82% 78%, rgba(138,154,130,0.28), transparent 45%),
+      linear-gradient(180deg, var(--ivory-deep) 0%, var(--ivory) 100%);
+    text-align:center;
+    overflow:hidden;
+  }
+  .hero-arch{
+    position:absolute;
+    top:0;left:50%;transform:translateX(-50%);
+    width:min(680px, 90vw);
+    opacity:0.9;
+    pointer-events:none;
+  }
+  .hero-content{position:relative;z-index:2;max-width:760px;padding:0 24px;}
+  .hero-content .eyebrow{margin-bottom:22px;}
+  .hero h1{
+    font-size:clamp(2.6rem, 6vw, 4.6rem);
+    line-height:1.1;
+    font-weight:500;
+    margin-bottom:22px;
+  }
+  .hero h1 em{font-style:italic;color:var(--sage-deep);}
+  .hero p.lede{
+    font-size:1.15rem;color:var(--charcoal-soft);max-width:520px;margin:0 auto 42px;
+    font-weight:300;
+  }
+  .hero-ctas{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;}
+  .scroll-cue{
+    position:absolute;bottom:38px;left:50%;transform:translateX(-50%);
+    font-size:0.7rem;text-transform:uppercase;letter-spacing:0.2em;color:var(--charcoal-soft);
+    display:flex;flex-direction:column;align-items:center;gap:10px;
+  }
+  .scroll-cue .line{width:1px;height:38px;background:var(--charcoal-soft);animation:scrollpulse 2.2s infinite ease;}
+  @keyframes scrollpulse{0%{opacity:0.2;}50%{opacity:0.9;}100%{opacity:0.2;}}
+
+  /* ---------- Fade-in on scroll ---------- */
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity 0.9s ease, transform 0.9s ease;}
+  .reveal.in-view{opacity:1;transform:translateY(0);}
+
+  /* ---------- Section headers ---------- */
+  .section-head{text-align:center;max-width:640px;margin:0 auto 64px;}
+  .section-head h2{font-size:clamp(2rem,4vw,2.9rem);margin-bottom:18px;}
+  .section-head p{color:var(--charcoal-soft);font-size:1.02rem;}
+
+  /* ---------- Intro / About ---------- */
+  .intro-grid{
+    display:grid;grid-template-columns:0.9fr 1.1fr;gap:80px;align-items:center;
+  }
+  @media(max-width:860px){.intro-grid{grid-template-columns:1fr;gap:40px;}}
+  .visual-block{
+    aspect-ratio:4/5;border-radius:6px;position:relative;overflow:hidden;
+    background:linear-gradient(155deg, var(--blush) 0%, var(--beige) 55%, var(--sage) 130%);
+    box-shadow:var(--shadow);
+  }
+  .visual-block.--wide{aspect-ratio:16/10;}
+  .visual-block.--square{aspect-ratio:1/1;}
+  .visual-block .caption-tag{
+    position:absolute;bottom:20px;left:20px;
+    background:rgba(255,255,255,0.85);backdrop-filter:blur(6px);
+    padding:8px 16px;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.14em;
+    color:var(--charcoal);border-radius:2px;
+  }
+  .intro-copy h2{font-size:clamp(1.9rem,3.6vw,2.7rem);margin-bottom:24px;}
+  .intro-copy p{color:var(--charcoal-soft);margin-bottom:20px;font-size:1.02rem;}
+  .stat-row{display:flex;gap:44px;margin-top:36px;}
+  .stat{}
+  .stat .num{font-family:'Cormorant Garamond',serif;font-size:2.4rem;color:var(--sage-deep);}
+  .stat .lbl{font-size:0.74rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--charcoal-soft);}
+
+  /* ---------- Services / Featured ---------- */
+  .service-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:36px;
+  }
+  @media(max-width:900px){.service-grid{grid-template-columns:1fr;}}
+  .service-card{
+    background:var(--white);border-radius:6px;overflow:hidden;
+    box-shadow:var(--shadow);transition:transform 0.4s ease;
+  }
+  .service-card:hover{transform:translateY(-8px);}
+  .service-card .thumb{aspect-ratio:5/4;background:linear-gradient(135deg,var(--beige),var(--blush));position:relative;}
+  .service-card .thumb.--sage{background:linear-gradient(135deg,var(--sage),var(--beige));}
+  .service-card .thumb.--champ{background:linear-gradient(135deg,var(--champagne),var(--blush));}
+  .service-card .body{padding:30px 28px 34px;}
+  .service-card h3{font-size:1.4rem;margin-bottom:10px;}
+  .service-card p{color:var(--charcoal-soft);font-size:0.95rem;margin-bottom:18px;}
+  .card-link{font-size:0.76rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--sage-deep);border-bottom:1px solid var(--sage-deep);padding-bottom:3px;}
+
+  /* ---------- Full width band ---------- */
+  .band{
+    background:var(--charcoal);color:var(--ivory);
+    padding:110px 0;text-align:center;position:relative;
+  }
+  .band h2{color:var(--ivory);font-size:clamp(2rem,4vw,2.8rem);margin-bottom:22px;}
+  .band p{color:rgba(251,248,244,0.72);max-width:560px;margin:0 auto 40px;}
+
+  /* ---------- Page hero (sub pages) ---------- */
+  .page-hero{
+    padding:190px 0 90px;text-align:center;
+    background:linear-gradient(180deg, var(--beige) 0%, var(--ivory) 100%);
+  }
+  .page-hero h1{font-size:clamp(2.3rem,5vw,3.6rem);margin-bottom:16px;}
+  .page-hero p{color:var(--charcoal-soft);max-width:560px;margin:0 auto;font-size:1.05rem;}
+
+  /* ---------- Alternating feature rows ---------- */
+  .feature-row{
+    display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;
+    margin-bottom:130px;
+  }
+  .feature-row:last-child{margin-bottom:0;}
+  .feature-row.--reverse{direction:rtl;}
+  .feature-row.--reverse > *{direction:ltr;}
+  @media(max-width:860px){
+    .feature-row, .feature-row.--reverse{grid-template-columns:1fr;direction:ltr;gap:32px;margin-bottom:80px;}
+  }
+  .feature-copy .eyebrow{margin-bottom:16px;}
+  .feature-copy h3{font-size:clamp(1.7rem,3vw,2.3rem);margin-bottom:18px;}
+  .feature-copy p{color:var(--charcoal-soft);margin-bottom:26px;}
+  .feature-list{margin-bottom:28px;}
+  .feature-list li{
+    padding-left:26px;position:relative;margin-bottom:12px;color:var(--charcoal-soft);font-size:0.97rem;
+  }
+  .feature-list li::before{
+    content:'';position:absolute;left:0;top:9px;width:12px;height:1px;background:var(--champagne);
+  }
+
+  /* ---------- Gallery ---------- */
+  .filter-bar{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:56px;}
+  .filter-btn{
+    padding:9px 22px;border:1px solid var(--charcoal-soft);border-radius:20px;
+    font-size:0.74rem;text-transform:uppercase;letter-spacing:0.1em;
+    background:transparent;color:var(--charcoal-soft);cursor:pointer;transition:all 0.3s ease;
+  }
+  .filter-btn.active, .filter-btn:hover{background:var(--charcoal);color:var(--white);border-color:var(--charcoal);}
+  .gallery-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+  }
+  @media(max-width:860px){.gallery-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:520px){.gallery-grid{grid-template-columns:1fr;}}
+  .gallery-item{
+    aspect-ratio:4/5;border-radius:4px;overflow:hidden;position:relative;cursor:default;
+    transition:transform 0.4s ease, opacity 0.4s ease;
+  }
+  .gallery-item.hidden-item{display:none;}
+  .gallery-item .ph{
+    width:100%;height:100%;
+    display:flex;align-items:flex-end;padding:18px;
+  }
+  .gallery-item .tag{
+    background:rgba(255,255,255,0.88);padding:6px 14px;font-size:0.68rem;
+    text-transform:uppercase;letter-spacing:0.1em;border-radius:2px;
+  }
+  .gallery-item:hover{transform:scale(1.02);}
+  .g1{background:linear-gradient(150deg,var(--blush),var(--beige));}
+  .g2{background:linear-gradient(150deg,var(--sage),var(--beige));}
+  .g3{background:linear-gradient(150deg,var(--champagne),var(--blush-deep));}
+  .g4{background:linear-gradient(150deg,var(--beige),var(--sage));}
+  .g5{background:linear-gradient(150deg,var(--blush-deep),var(--champagne));}
+  .g6{background:linear-gradient(150deg,var(--sage-deep),var(--beige));}
+  .g7{background:linear-gradient(150deg,var(--champagne),var(--sage));}
+  .g8{background:linear-gradient(150deg,var(--beige),var(--blush));}
+  .g9{background:linear-gradient(150deg,var(--sage),var(--champagne));}
+
+  /* ---------- Reviews ---------- */
+  .review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;}
+  @media(max-width:900px){.review-grid{grid-template-columns:1fr;}}
+  .review-card{
+    background:var(--white);padding:40px 34px;border-radius:6px;box-shadow:var(--shadow);
+    position:relative;
+  }
+  .review-card .stars{color:var(--champagne);letter-spacing:3px;margin-bottom:18px;font-size:1rem;}
+  .review-card p{color:var(--charcoal-soft);font-style:italic;margin-bottom:22px;font-size:0.98rem;}
+  .review-card .who{font-size:0.82rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--charcoal);}
+  .review-card .who span{display:block;font-size:0.76rem;color:var(--charcoal-soft);text-transform:none;letter-spacing:0;margin-top:2px;}
+
+  /* ---------- Contact ---------- */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;}
+  @media(max-width:860px){.contact-grid{grid-template-columns:1fr;}}
+  .contact-form{display:flex;flex-direction:column;gap:20px;}
+  .field{display:flex;flex-direction:column;gap:8px;}
+  .field label{font-size:0.72rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--charcoal-soft);}
+  .field input, .field select, .field textarea{
+    border:none;border-bottom:1px solid var(--charcoal-soft);
+    background:transparent;padding:10px 2px;font-family:'Jost',sans-serif;font-size:0.98rem;color:var(--charcoal);
+  }
+  .field input:focus, .field select:focus, .field textarea:focus{
+    outline:none;border-bottom-color:var(--champagne);
+  }
+  .field textarea{resize:vertical;min-height:110px;}
+  .contact-info h3{font-size:1.6rem;margin-bottom:20px;}
+  .contact-info p{color:var(--charcoal-soft);margin-bottom:26px;}
+  .contact-detail{display:flex;align-items:center;gap:14px;margin-bottom:20px;}
+  .contact-detail .ic{
+    width:38px;height:38px;border-radius:50%;border:1px solid var(--champagne);
+    display:flex;align-items:center;justify-content:center;color:var(--champagne-deep);flex-shrink:0;
+  }
+  .contact-detail .ic svg{width:16px;height:16px;fill:currentColor;}
+  .contact-detail div a{color:var(--charcoal);}
+  .service-areas{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px;}
+  .area-chip{
+    padding:6px 16px;border:1px solid var(--beige);border-radius:20px;font-size:0.78rem;color:var(--charcoal-soft);
+  }
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--charcoal);color:rgba(251,248,244,0.75);padding:70px 0 30px;}
+  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:50px;margin-bottom:50px;}
+  @media(max-width:768px){.footer-grid{grid-template-columns:1fr;gap:36px;}}
+  footer .logo{color:var(--ivory);margin-bottom:16px;}
+  footer p{font-size:0.92rem;line-height:1.8;color:rgba(251,248,244,0.6);}
+  footer h4{color:var(--ivory);font-size:0.82rem;text-transform:uppercase;letter-spacing:0.14em;margin-bottom:20px;font-family:'Jost',sans-serif;font-weight:500;}
+  footer ul li{margin-bottom:12px;}
+  footer ul a{font-size:0.92rem;color:rgba(251,248,244,0.65);transition:color 0.3s ease;}
+  footer ul a:hover{color:var(--champagne);}
+  .footer-bottom{
+    border-top:1px solid rgba(251,248,244,0.12);padding-top:26px;
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;
+    font-size:0.78rem;color:rgba(251,248,244,0.5);
+  }
+  .footer-social{display:flex;gap:14px;}
+  .footer-social a{
+    width:32px;height:32px;border-radius:50%;border:1px solid rgba(251,248,244,0.3);
+    display:flex;align-items:center;justify-content:center;color:rgba(251,248,244,0.75);
+  }
+  .footer-social svg{width:14px;height:14px;fill:currentColor;}
+
+  /* ---------- Floating WhatsApp ---------- */
+  .whatsapp-float{
+    position:fixed;bottom:26px;right:26px;z-index:999;
+    width:60px;height:60px;border-radius:50%;background:#3B342E;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 10px 30px rgba(59,52,46,0.35);
+    transition:transform 0.3s ease, background 0.3s ease;
+  }
+  .whatsapp-float:hover{transform:scale(1.08);background:var(--sage-deep);}
+  .whatsapp-float svg{width:28px;height:28px;fill:var(--ivory);}
+
+  /* helper for form note */
+  .form-note{font-size:0.78rem;color:var(--charcoal-soft);margin-top:6px;}
+</style>
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header>
+  <div class="nav-wrap">
+    <a href="#home" class="logo">Jennifers <span>Eden</span></a>
+    <nav id="mainNav">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#floral-hire">Floral Hire</a></li>
+        <li><a href="#soft-play">Soft Play &amp; Parties</a></li>
+        <li><a href="#weddings">Weddings</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="social-icons" id="mobileSocials">
+        <a href="#" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg></a>
+        <a href="#" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2c2.7 0 3.05.01 4.12.06 1.06.05 1.79.22 2.43.47.66.26 1.22.6 1.77 1.15.55.55.9 1.11 1.15 1.77.25.64.42 1.37.47 2.43.05 1.07.06 1.42.06 4.12s-.01 3.05-.06 4.12c-.05 1.06-.22 1.79-.47 2.43a4.9 4.9 0 0 1-1.15 1.77 4.9 4.9 0 0 1-1.77 1.15c-.64.25-1.37.42-2.43.47-1.07.05-1.42.06-4.12.06s-3.05-.01-4.12-.06c-1.06-.05-1.79-.22-2.43-.47a4.9 4.9 0 0 1-1.77-1.15 4.9 4.9 0 0 1-1.15-1.77c-.25-.64-.42-1.37-.47-2.43C2.01 15.05 2 14.7 2 12s.01-3.05.06-4.12c.05-1.06.22-1.79.47-2.43.26-.66.6-1.22 1.15-1.77A4.9 4.9 0 0 1 5.45.53c.64-.25 1.37-.42 2.43-.47C8.95.01 9.3 0 12 0zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zm5.2-8.4a1.2 1.2 0 1 0 0-2.4 1.2 1.2 0 0 0 0 2.4z"/></svg></a>
+      </div>
+    </nav>
+    <div class="nav-overlay" id="navOverlay"></div>
+    <div class="nav-right">
+      <a href="https://wa.me/447312274577?text=Hi%20Jennifers%20Eden%2C%20I%27d%20love%20to%20enquire%20about%20styling%20for%20my%20event." class="btn btn-whatsapp" target="_blank" rel="noopener">Enquire</a>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== HOME ===================== -->
+<section id="home" class="hero">
+  <svg class="hero-arch" viewBox="0 0 680 420" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M40 400 C40 180, 220 30, 340 30 C460 30, 640 180, 640 400" stroke="#C6A664" stroke-width="1.2" opacity="0.55"/>
+    <g opacity="0.6">
+      <ellipse cx="60" cy="380" rx="14" ry="7" fill="#8A9A82" transform="rotate(-30 60 380)"/>
+      <ellipse cx="120" cy="250" rx="13" ry="6" fill="#E9CBC4" transform="rotate(-55 120 250)"/>
+      <ellipse cx="220" cy="120" rx="14" ry="7" fill="#8A9A82" transform="rotate(-75 220 120)"/>
+      <ellipse cx="340" cy="70" rx="15" ry="7" fill="#C6A664" transform="rotate(0 340 70)"/>
+      <ellipse cx="460" cy="120" rx="14" ry="7" fill="#8A9A82" transform="rotate(75 460 120)"/>
+      <ellipse cx="560" cy="250" rx="13" ry="6" fill="#E9CBC4" transform="rotate(55 560 250)"/>
+      <ellipse cx="620" cy="380" rx="14" ry="7" fill="#8A9A82" transform="rotate(30 620 380)"/>
+    </g>
+  </svg>
+  <div class="hero-content">
+    <span class="eyebrow">Luxury Event Styling · Gloucestershire &amp; Oxfordshire</span>
+    <h1>Making your memorable moments, <em>beautiful.</em></h1>
+    <p class="lede">Breathtaking floral installations, bespoke venue styling and premium party hire for weddings, christenings, birthdays and corporate events.</p>
+    <div class="hero-ctas">
+      <a href="#contact" class="btn btn-primary">Book a Consultation</a>
+      <a href="https://wa.me/447312274577?text=Hi%20Jennifers%20Eden%2C%20I%27d%20love%20to%20enquire%20about%20styling%20for%20my%20event." class="btn btn-whatsapp" target="_blank" rel="noopener">Enquire on WhatsApp</a>
+      <a href="#gallery" class="btn">View Gallery</a>
+    </div>
+  </div>
+  <div class="scroll-cue"><span>Scroll</span><span class="line"></span></div>
+</section>
+
+<div class="vine-divider" data-reveal><svg viewBox="0 0 220 40"><path class="vine-path" d="M0 20 Q 55 0, 110 20 T 220 20"/><circle class="vine-leaf" cx="55" cy="9" r="4"/><circle class="vine-leaf" cx="165" cy="9" r="4"/></svg></div>
+
+<!-- Intro -->
+<section class="section">
+  <div class="container intro-grid reveal" data-reveal>
+    <div class="visual-block --square">
+      <span class="caption-tag">Bespoke floral artistry</span>
+    </div>
+    <div class="intro-copy">
+      <span class="eyebrow">About Jennifers Eden</span>
+      <h2>Every detail, styled with intention.</h2>
+      <p>Jennifers Eden specialises in luxury artificial floral installations, event styling and premium party hire across Gloucestershire and Oxfordshire. From breathtaking flower arches and bespoke venue styling to elegant soft play and party décor, we create unforgettable spaces for the moments that matter most.</p>
+      <p>No two events are alike, and neither are our installations — every arch, backdrop and welcome sign is designed around your day, your palette and your venue.</p>
+      <div class="stat-row">
+        <div class="stat"><div class="num">200+</div><div class="lbl">Events Styled</div></div>
+        <div class="stat"><div class="num">2</div><div class="lbl">Counties Covered</div></div>
+        <div class="stat"><div class="num">5★</div><div class="lbl">Average Rating</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="vine-divider" data-reveal><svg viewBox="0 0 220 40"><path class="vine-path" d="M0 20 Q 55 40, 110 20 T 220 20"/><circle class="vine-leaf" cx="55" cy="31" r="4"/><circle class="vine-leaf" cx="165" cy="31" r="4"/></svg></div>
+
+<!-- Featured services -->
+<section class="section" style="background:var(--ivory-deep);">
+  <div class="container">
+    <div class="section-head reveal" data-reveal>
+      <span class="eyebrow">What We Offer</span>
+      <h2>Styling for every kind of celebration</h2>
+      <p>From ceremony arches to soft play suites, each service is delivered with the same premium finish.</p>
+    </div>
+    <div class="service-grid">
+      <div class="service-card reveal" data-reveal>
+        <div class="thumb"></div>
+        <div class="body">
+          <h3>Floral Hire</h3>
+          <p>Luxury flower arches, backdrops, welcome signs and bespoke floral installations for any venue.</p>
+          <a href="#floral-hire" class="card-link">Explore Floral Hire</a>
+        </div>
+      </div>
+      <div class="service-card reveal" data-reveal>
+        <div class="thumb --sage"></div>
+        <div class="body">
+          <h3>Soft Play &amp; Parties</h3>
+          <p>Premium white soft play, ball pits and ride-on cars, styled to feel elevated, not childish.</p>
+          <a href="#soft-play" class="card-link">Explore Soft Play</a>
+        </div>
+      </div>
+      <div class="service-card reveal" data-reveal>
+        <div class="thumb --champ"></div>
+        <div class="body">
+          <h3>Weddings</h3>
+          <p>Ceremony and reception styling, aisle arrangements and bespoke venue transformations.</p>
+          <a href="#weddings" class="card-link">Explore Weddings</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="vine-divider" data-reveal><svg viewBox="0 0 220 40"><path class="vine-path" d="M0 20 Q 55 0, 110 20 T 220 20"/><circle class="vine-leaf" cx="55" cy="9" r="4"/><circle class="vine-leaf" cx="165" cy="9" r="4"/></svg></div>
+
+<!-- Gallery preview -->
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal" data-reveal>
+      <span class="eyebrow">A Glimpse</span>
+      <h2>Recent styling, in bloom</h2>
+    </div>
+    <div class="gallery-grid reveal" data-reveal>
+      <div class="gallery-item g1"><div class="ph"><span class="tag">Wedding Arch</span></div></div>
+      <div class="gallery-item g2"><div class="ph"><span class="tag">Baby Shower</span></div></div>
+      <div class="gallery-item g3"><div class="ph"><span class="tag">Soft Play Suite</span></div></div>
+    </div>
+    <div style="text-align:center;margin-top:48px;">
+      <a href="#gallery" class="btn">View Full Gallery</a>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials preview band -->
+<section class="band">
+  <div class="container reveal" data-reveal>
+    <span class="eyebrow" style="color:var(--champagne);">Kind Words</span>
+    <h2>"Our wedding arch was more beautiful than I ever imagined."</h2>
+    <p>Join over 200 clients across Gloucestershire and Oxfordshire who trusted Jennifers Eden with their memorable moments.</p>
+    <a href="#reviews" class="btn btn-outline-light">Read All Reviews</a>
+  </div>
+</section>
+
+<!-- ===================== FLORAL HIRE ===================== -->
+<section id="floral-hire" class="page-hero">
+  <div class="container reveal" data-reveal>
+    <span class="eyebrow">Floral Hire</span>
+    <h1>Installations that transform a room</h1>
+    <p>Luxury artificial florals, designed and built by hand for weddings, celebrations and commercial spaces.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="feature-row reveal" data-reveal>
+      <div class="visual-block --wide"><span class="caption-tag">Luxury flower arch</span></div>
+      <div class="feature-copy">
+        <span class="eyebrow">Signature Piece</span>
+        <h3>Luxury Flower Arches</h3>
+        <p>A hand-built statement arch, styled to your palette — the centrepiece for ceremonies, photo moments and venue entrances.</p>
+        <ul class="feature-list">
+          <li>Fully bespoke colour palettes</li>
+          <li>Delivered, built and collected</li>
+          <li>Suitable for indoor and outdoor venues</li>
+        </ul>
+        <a href="https://wa.me/447312274577?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20a%20flower%20arch." class="btn btn-whatsapp" target="_blank" rel="noopener">Enquire About Arches</a>
+      </div>
+    </div>
+
+    <div class="feature-row --reverse reveal" data-reveal>
+      <div class="visual-block --wide"><span class="caption-tag">Floral backdrops &amp; signage</span></div>
+      <div class="feature-copy">
+        <span class="eyebrow">Backdrops &amp; Signage</span>
+        <h3>Floral Backdrops &amp; Welcome Signs</h3>
+        <p>From full-wall floral backdrops to elegant welcome signs, each piece is designed to set the tone the moment guests arrive.</p>
+        <ul class="feature-list">
+          <li>Floral backdrops for stages &amp; photo walls</li>
+          <li>Bespoke welcome signs</li>
+          <li>Commercial floral displays for retail &amp; events</li>
+        </ul>
+        <a href="https://wa.me/447312274577?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20floral%20backdrops.">
+          <span class="btn btn-whatsapp">Enquire About Backdrops</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="feature-row reveal" data-reveal>
+      <div class="visual-block --wide"><span class="caption-tag">Aisle &amp; venue styling</span></div>
+      <div class="feature-copy">
+        <span class="eyebrow">Venue Styling</span>
+        <h3>Aisle Arrangements &amp; Venue Styling</h3>
+        <p>Full venue transformations, including aisle arrangements and bespoke floral installations tailored to your space.</p>
+        <ul class="feature-list">
+          <li>Aisle and pew florals</li>
+          <li>Full venue styling packages</li>
+          <li>Bespoke installations for any brief</li>
+        </ul>
+        <a href="#contact" class="btn">Book a Consultation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SOFT PLAY ===================== -->
+<section id="soft-play" class="page-hero">
+  <div class="container reveal" data-reveal>
+    <span class="eyebrow">Soft Play &amp; Parties</span>
+    <h1>Premium play, elevated styling</h1>
+    <p>Luxury white soft play and party hire, designed to feel refined — not childish — in every space.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="feature-row reveal" data-reveal>
+      <div class="visual-block --wide"><span class="caption-tag">Luxury white soft play</span></div>
+      <div class="feature-copy">
+        <span class="eyebrow">The Suite</span>
+        <h3>Luxury White Soft Play &amp; Ball Pit</h3>
+        <p>Our signature all-white soft play suite and ball pit hire brings an elevated, editorial feel to any celebration.</p>
+        <ul class="feature-list">
+          <li>Premium ball pit hire</li>
+          <li>Ride-on cars for little guests</li>
+          <li>Fully cleaned and sanitised between hires</li>
+        </ul>
+        <a href="https://wa.me/447312274577?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20soft%20play%20hire." class="btn btn-whatsapp" target="_blank" rel="noopener">Enquire About Soft Play</a>
+      </div>
+    </div>
+
+    <div class="feature-row --reverse reveal" data-reveal>
+      <div class="visual-block --wide"><span class="caption-tag">Personalisation &amp; plinths</span></div>
+      <div class="feature-copy">
+        <span class="eyebrow">Personal Touches</span>
+        <h3>Personalisation, Welcome Boards &amp; Plinths</h3>
+        <p>Add a name, an age or a milestone — personalisation and plinth styling that makes the space feel entirely yours.</p>
+        <ul class="feature-list">
+          <li>Soft play personalisation</li>
+          <li>Welcome boards</li>
+          <li>Plinth hire for cakes &amp; displays</li>
+        </ul>
+        <a href="#contact" class="btn">Book a Consultation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WEDDINGS ===================== -->
+<section id="weddings" class="page-hero">
+  <div class="container reveal" data-reveal>
+    <span class="eyebrow">Weddings</span>
+    <h1>Luxury wedding styling</h1>
+    <p>Ceremony to reception, we style every corner of your wedding day with the same considered elegance.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="feature-row reveal" data-reveal>
+      <div class="visual-block --wide"><span class="caption-tag">Ceremony styling</span></div>
+      <div class="feature-copy">
+        <span class="eyebrow">Ceremony</span>
+        <h3>Ceremony Styling &amp; Wedding Arches</h3>
+        <p>A beautifully styled ceremony, from a statement floral arch to aisle arrangements that frame the walk down the aisle.</p>
+        <ul class="feature-list">
+          <li>Bespoke ceremony arches</li>
+          <li>Aisle arrangements</li>
+          <li>Welcome signs for guests</li>
+        </ul>
+        <a href="https://wa.me/447312274577?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20wedding%20styling." class="btn btn-whatsapp" target="_blank" rel="noopener">Enquire About Your Wedding</a>
+      </div>
+    </div>
+
+    <div class="feature-row --reverse reveal" data-reveal>
+      <div class="visual-block --wide"><span class="caption-tag">Reception styling</span></div>
+      <div class="feature-copy">
+        <span class="eyebrow">Reception</span>
+        <h3>Reception Styling &amp; Bespoke Installations</h3>
+        <p>From top table florals to full-room installations, we design your reception to feel considered from every angle.</p>
+        <ul class="feature-list">
+          <li>Top table &amp; centrepiece styling</li>
+          <li>Bespoke venue installations</li>
+          <li>Full styling packages available</li>
+        </ul>
+        <a href="#contact" class="btn">Request Wedding Brochure</a>
+      </div>
+    </div>
+
+    <div class="section-head reveal" data-reveal style="margin-top:40px;">
+      <span class="eyebrow">Inspiration</span>
+      <h2>A taste of recent weddings</h2>
+    </div>
+    <div class="gallery-grid reveal" data-reveal>
+      <div class="gallery-item g4"><div class="ph"><span class="tag">Ceremony Arch</span></div></div>
+      <div class="gallery-item g5"><div class="ph"><span class="tag">Reception Florals</span></div></div>
+      <div class="gallery-item g6"><div class="ph"><span class="tag">Top Table</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== GALLERY ===================== -->
+<section id="gallery" class="page-hero">
+  <div class="container reveal" data-reveal>
+    <span class="eyebrow">Gallery</span>
+    <h1>Styled moments, in full</h1>
+    <p>Browse our recent installations by event type.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <div class="filter-bar reveal" data-reveal>
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="weddings">Weddings</button>
+      <button class="filter-btn" data-filter="floral">Floral Installations</button>
+      <button class="filter-btn" data-filter="softplay">Soft Play</button>
+      <button class="filter-btn" data-filter="corporate">Corporate Events</button>
+      <button class="filter-btn" data-filter="babyshower">Baby Showers</button>
+      <button class="filter-btn" data-filter="christenings">Christenings</button>
+      <button class="filter-btn" data-filter="birthdays">Birthdays</button>
+    </div>
+    <div class="gallery-grid" id="fullGallery">
+      <div class="gallery-item g1" data-cat="weddings"><div class="ph"><span class="tag">Wedding Arch</span></div></div>
+      <div class="gallery-item g2" data-cat="babyshower"><div class="ph"><span class="tag">Baby Shower</span></div></div>
+      <div class="gallery-item g3" data-cat="softplay"><div class="ph"><span class="tag">Soft Play Suite</span></div></div>
+      <div class="gallery-item g4" data-cat="floral"><div class="ph"><span class="tag">Floral Backdrop</span></div></div>
+      <div class="gallery-item g5" data-cat="corporate"><div class="ph"><span class="tag">Corporate Launch</span></div></div>
+      <div class="gallery-item g6" data-cat="christenings"><div class="ph"><span class="tag">Christening Styling</span></div></div>
+      <div class="gallery-item g7" data-cat="birthdays"><div class="ph"><span class="tag">Birthday Backdrop</span></div></div>
+      <div class="gallery-item g8" data-cat="weddings"><div class="ph"><span class="tag">Aisle Arrangement</span></div></div>
+      <div class="gallery-item g9" data-cat="floral"><div class="ph"><span class="tag">Welcome Sign</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== REVIEWS ===================== -->
+<section id="reviews" class="section" style="background:var(--ivory-deep);">
+  <div class="container">
+    <div class="section-head reveal" data-reveal>
+      <span class="eyebrow">Reviews</span>
+      <h2>What our clients say</h2>
+    </div>
+    <div class="review-grid">
+      <div class="review-card reveal" data-reveal>
+        <div class="stars">★★★★★</div>
+        <p>"From the first message to the day itself, everything was seamless. Our arch was the most photographed thing at the wedding."</p>
+        <div class="who">Charlotte H.<span>Wedding, Cheltenham</span></div>
+      </div>
+      <div class="review-card reveal" data-reveal>
+        <div class="stars">★★★★★</div>
+        <p>"The soft play suite was stunning — genuinely didn't expect it to look this elegant. Guests couldn't stop asking who did it."</p>
+        <div class="who">Amy R.<span>1st Birthday, Gloucester</span></div>
+      </div>
+      <div class="review-card reveal" data-reveal>
+        <div class="stars">★★★★★</div>
+        <p>"Jennifer styled our entire venue for the launch event and it completely elevated the brand experience. Faultless."</p>
+        <div class="who">Daniel P.<span>Corporate Event, Oxford</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section id="contact" class="section">
+  <div class="container">
+    <div class="section-head reveal" data-reveal>
+      <span class="eyebrow">Get In Touch</span>
+      <h2>Let's style your memorable moment</h2>
+      <p>Tell us about your event and we'll be in touch to talk through styling, availability and pricing.</p>
+    </div>
+    <div class="contact-grid reveal" data-reveal>
+      <form class="contact-form" onsubmit="event.preventDefault(); window.location.href='mailto:jenniferxg@live.co.uk?subject=Event%20Enquiry%20from%20' + encodeURIComponent(this.name.value) + '&body=' + encodeURIComponent('Event type: ' + this.eventtype.value + '\nDate: ' + this.date.value + '\n\n' + this.message.value);">
+        <div class="field">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="field">
+          <label for="eventtype">Event type</label>
+          <select id="eventtype" name="eventtype">
+            <option>Wedding</option>
+            <option>Christening</option>
+            <option>Birthday</option>
+            <option>Baby Shower</option>
+            <option>Corporate Event</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="date">Event date</label>
+          <input type="date" id="date" name="date">
+        </div>
+        <div class="field">
+          <label for="message">Tell us about your event</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="align-self:flex-start;margin-top:6px;">Send Enquiry</button>
+        <p class="form-note">Prefer WhatsApp? <a href="https://wa.me/447312274577" style="color:var(--sage-deep);text-decoration:underline;" target="_blank" rel="noopener">Message us instantly</a>.</p>
+      </form>
+      <div class="contact-info">
+        <h3>Contact Details</h3>
+        <p>We cover weddings, christenings, birthdays, baby showers and corporate events across the following areas.</p>
+        <div class="contact-detail">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M20.5 15.5c-1.2 0-2.4-.2-3.5-.6-.4-.1-.8 0-1 .3l-1.6 2c-2.6-1.3-4.8-3.4-6.1-6.1l2-1.6c.3-.3.4-.7.3-1-.4-1.1-.6-2.3-.6-3.5 0-.6-.4-1-1-1H5.9c-.6 0-1 .4-1 1C4.9 14 10 19 16.5 19c.6 0 1-.4 1-1v-2.5c0-.6-.4-1-1-1z"/></svg></div>
+          <div><a href="https://wa.me/447312274577" target="_blank" rel="noopener">07312 274577 (WhatsApp)</a></div>
+        </div>
+        <div class="contact-detail">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M2 4h20v16H2V4zm2 2v.01L12 12l8-5.99V6H4zm16 12V8.24l-8 5.99-8-5.99V18h16z"/></svg></div>
+          <div><a href="mailto:jenniferxg@live.co.uk">jenniferxg@live.co.uk</a></div>
+        </div>
+        <h4 style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:500;margin:26px 0 6px;">Service Areas</h4>
+        <div class="service-areas">
+          <span class="area-chip">Gloucestershire</span>
+          <span class="area-chip">Gloucester</span>
+          <span class="area-chip">Cheltenham</span>
+          <span class="area-chip">Oxfordshire</span>
+          <span class="area-chip">Oxford</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo">Jennifers Eden</div>
+        <p>Luxury event styling, floral installations and premium party hire across Gloucestershire &amp; Oxfordshire.<br>"Making your memorable moments, beautiful."</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#floral-hire">Floral Hire</a></li>
+          <li><a href="#soft-play">Soft Play &amp; Parties</a></li>
+          <li><a href="#weddings">Weddings</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="https://wa.me/447312274577" target="_blank" rel="noopener">07312 274577</a></li>
+          <li><a href="mailto:jenniferxg@live.co.uk">jenniferxg@live.co.uk</a></li>
+          <li><a href="#contact">Book a Consultation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Jennifers Eden. All rights reserved.</span>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg></a>
+        <a href="#" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2c2.7 0 3.05.01 4.12.06 1.06.05 1.79.22 2.43.47.66.26 1.22.6 1.77 1.15.55.55.9 1.11 1.15 1.77.25.64.42 1.37.47 2.43.05 1.07.06 1.42.06 4.12s-.01 3.05-.06 4.12c-.05 1.06-.22 1.79-.47 2.43a4.9 4.9 0 0 1-1.15 1.77 4.9 4.9 0 0 1-1.77 1.15c-.64.25-1.37.42-2.43.47-1.07.05-1.42.06-4.12.06s-3.05-.01-4.12-.06c-1.06-.05-1.79-.22-2.43-.47a4.9 4.9 0 0 1-1.77-1.15 4.9 4.9 0 0 1-1.15-1.77c-.25-.64-.42-1.37-.47-2.43C2.01 15.05 2 14.7 2 12s.01-3.05.06-4.12c.05-1.06.22-1.79.47-2.43.26-.66.6-1.22 1.15-1.77A4.9 4.9 0 0 1 5.45.53c.64-.25 1.37-.42 2.43-.47C8.95.01 9.3 0 12 0zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zm5.2-8.4a1.2 1.2 0 1 0 0-2.4 1.2 1.2 0 0 0 0 2.4z"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== Floating WhatsApp ===================== -->
+<a href="https://wa.me/447312274577?text=Hi%20Jennifers%20Eden%2C%20I%27d%20love%20to%20enquire%20about%20styling%20for%20my%20event." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M20.5 3.5A11 11 0 0 0 2.1 16.9L1 22l5.3-1.1A11 11 0 1 0 20.5 3.5zM12 20.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3.1.7.6-3-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-2-1.2 7.4 7.4 0 0 1-1.4-1.7c-.1-.2 0-.4.1-.5l.4-.5c.1-.1.2-.3.2-.4a.5.5 0 0 0 0-.5c-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.3 0 1.4 1 2.7 1.1 2.9.1.2 2 3 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.2-.2-.4-.3z"/></svg>
+</a>
+
+<script>
+  // nav dropdown toggle (desktop + mobile)
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const mainNav = document.getElementById('mainNav');
+  const navOverlay = document.getElementById('navOverlay');
+  function toggleNav(){
+    mainNav.classList.toggle('open');
+    hamburgerBtn.classList.toggle('open');
+    navOverlay.classList.toggle('open');
+  }
+  function closeNav(){
+    mainNav.classList.remove('open');
+    hamburgerBtn.classList.remove('open');
+    navOverlay.classList.remove('open');
+  }
+  hamburgerBtn.addEventListener('click', toggleNav);
+  navOverlay.addEventListener('click', closeNav);
+  document.querySelectorAll('#mainNav a').forEach(a => {
+    a.addEventListener('click', closeNav);
+  });
+
+  // reveal on scroll
+  const revealEls = document.querySelectorAll('.reveal, .vine-divider');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => io.observe(el));
+
+  // gallery filter
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const galleryItems = document.querySelectorAll('#fullGallery .gallery-item');
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      galleryItems.forEach(item => {
+        if (filter === 'all' || item.dataset.cat === filter) {
+          item.classList.remove('hidden-item');
+        } else {
+          item.classList.add('hidden-item');
+        }
+      });
+    });
+  });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
